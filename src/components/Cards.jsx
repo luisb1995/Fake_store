@@ -8,7 +8,7 @@ function Cards({productos}) {
             productos.map(item=>{
                 return(
                 <div key={item.id} className='card'>   
-                    <h2>{item.title.split(" ",6).join(" ")}</h2>
+                    <h2>{item.title.split(" ",5).join(" ")}</h2>
                     <figure>
                         <img src={item.image} alt={item.name} />
                     </figure>

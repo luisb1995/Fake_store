@@ -60,6 +60,10 @@ img {
   font-weight: bold;
 }
 
+.pagination{
+  justify-content: center;
+}
+
 @media screen and (max-width: 620px) {
   .card {
     width: 80%;
