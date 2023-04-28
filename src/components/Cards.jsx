@@ -1,4 +1,5 @@
 import React from 'react'
+import "../index.css"
 
 function Cards({productos}) {
   return (
@@ -7,13 +8,16 @@ function Cards({productos}) {
             productos.map(item=>{
                 return(
                 <div key={item.id} className='card'>   
-                    <h2>{item.title}</h2>
+                    <h2>{item.title.split(" ",6).join(" ")}</h2>
                     <figure>
-                        <img src={item.image} alt="" />
+                        <img src={item.image} alt={item.name} />
                     </figure>
                     <h3>Precio: {item.price}$</h3>
                     <h4>Stock Disponible: {item.rating.count} </h4>
-                    <button className="btn btn-success">Añadir al carrito <i className="bi bi-cart4"></i></button>
+
+                    <div className='button'>
+                         <button className="btn btn-success">Añadir al carrito <i className="bi bi-cart4"></i></button>
+                    </div>
                 </div>
                )           
             })

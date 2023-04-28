@@ -12,17 +12,18 @@ function App() {
         fetch('https://fakestoreapi.com/products/')
             .then(res=>res.json())
             .then(data=>{
-              console.log(data);
               setProductos(data)
             })
             
             
   }
 
+  const primerosCincoProductos = productos.slice(0, 4);
+
   useEffect(() => {
         getProducts();
   }, []);
-  const primerosCincoProductos = productos.slice(0, 4);
+  
   return (
     <section className='contenedor'>
       <header>
